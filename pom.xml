@@ -1,8 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.colorcc.study</groupId>
-  <artifactId>git-multiuser</artifactId>
-  <version>1.1.0-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.colorcc.study</groupId>
+	<artifactId>git-multiuser</artifactId>
+	<version>1.1.0-SNAPSHOT</version>
 	<properties>
 		<maven.text.encoding>UTF-8</maven.text.encoding>
 
@@ -16,9 +17,15 @@
 
 		<!-- The dependencies's version -->
 		<maven.junit.version>4.8.2</maven.junit.version>
-		
-		 <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+
+		<maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
 	</properties>
+
+	<scm>
+		<connection>scm:git:https://jackqin@github.com/jackqin/git-multiuser.git</connection>
+		<developerConnection>scm:git:https://jackqin@github.com/jackqin/git-multiuser.git</developerConnection>
+		<url>scm:git:https://jackqin@github.com/jackqin/git-multiuser.git</url>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -38,6 +45,20 @@
 					<source>${maven.compile.source}</source>
 					<target>${maven.compile.target}</target>
 					<encoding>${maven.text.encoding}</encoding>
+				</configuration>
+			</plugin>
+			
+			<!-- use mvn scm:update, mvn scm:list, mvn duff... -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.4</version>
+				<configuration>
+					<basedir>${project.basedir}</basedir>
+					<includes>pom.xml</includes>
+					<excludes>${project.basedir}\target,${project.basedir}\.git</excludes>
+					<username>username</username>
+					<password>password</password>
 				</configuration>
 			</plugin>
 		</plugins>
