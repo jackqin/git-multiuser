@@ -1,14 +1,24 @@
 package com.colorcc.study.git.multiuser.helloworld;
 
 public class HelloWorld {
+	
+	public void say(String str) {
+		if (str == null) {
+			System.out.println("Hello World!");
+		}
+		else {
+			System.out.println("Hello, " + str);
+		}
+	}
 
   /**
    * Add out put by jackqin
    * @param args
    */
   public static void main(String[] args) {
-    // TODO Auto-generated method stub
-	  System.out.println("Hello World!");
+	  HelloWorld hw = new HelloWorld();
+	  hw.say(null);
+	  hw.say("Jack Qin!");
   }
 
 }
