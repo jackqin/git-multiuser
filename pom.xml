@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.colorcc.study</groupId>
 	<artifactId>git-multiuser</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<properties>
 		<maven.text.encoding>UTF-8</maven.text.encoding>
 
