@@ -1,21 +1,17 @@
+package com.colorcc.study.git.multiuser.qtj;
 
-package com.colorcc.study.git.multiuser.helloworld;
+import com.colorcc.study.git.multiuser.helloworld.HelloWorld;
 
-public class HelloWorld {
-
-  public void sayHello() {
-    System.out.println("Hello World");
-  }
+public class SayClient {
 
   /**
-   * Add out put by jackqin
-   * 
    * @param args
    */
   public static void main(String[] args) {
     // TODO Auto-generated method stub
     HelloWorld hw = new HelloWorld();
     hw.sayHello();
+
   }
 
 }
