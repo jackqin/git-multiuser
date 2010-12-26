@@ -3,4 +3,43 @@
   <groupId>com.colorcc.study</groupId>
   <artifactId>git-multiuser</artifactId>
   <version>1.1.0-SNAPSHOT</version>
+	<properties>
+		<maven.text.encoding>UTF-8</maven.text.encoding>
+
+		<!-- Java compiler's version, can change the version in child pom.xml. -->
+		<maven.compile.source>1.6</maven.compile.source>
+		<maven.compile.target>1.6</maven.compile.target>
+
+
+		<!-- JVM memory size -->
+		<maven.surefire.argLine>-Xmx512m</maven.surefire.argLine>
+
+		<!-- The dependencies's version -->
+		<maven.junit.version>4.8.2</maven.junit.version>
+		
+		 <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${maven.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${maven.compile.source}</source>
+					<target>${maven.compile.target}</target>
+					<encoding>${maven.text.encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
